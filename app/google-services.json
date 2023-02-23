@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "42976860086",
+    "project_id": "edu-track-f139b",
+    "storage_bucket": "edu-track-f139b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42976860086:android:2e64ca932d33f4ca03d317",
+        "android_client_info": {
+          "package_name": "com.example.edutrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42976860086-7l87a2ro7it75b5mgkucmke9ukjq4mha.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUOc8V8zzqfjHq2GdgDYeYnO1lHVlj-uY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42976860086-7l87a2ro7it75b5mgkucmke9ukjq4mha.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
