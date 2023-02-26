@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.nio.file.FileStore;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName;
+    TextView fullName,phone;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -28,6 +28,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button edit = findViewById(R.id.editBtn);
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),studEdit.class));
+            }
+        });
+
+
+
+
+
+
+
         Button logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         fullName = findViewById(R.id.profileName);
+        phone = findViewById(R.id.profilePhone);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -50,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 fullName.setText(documentSnapshot.getString("FullName"));
+            }
+        });
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                phone.setText(documentSnapshot.getString("PhoneNumber"));
             }
         });
     }
