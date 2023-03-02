@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import java.nio.file.FileStore;
 
 public class MainActivity extends AppCompatActivity {
-    TextView fullName,phone;
+    TextView fullName,phone,ccCode;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
@@ -28,6 +28,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button logout = findViewById(R.id.logoutBtn);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
+            }
+        });
 
         Button edit = findViewById(R.id.editBtn);
 
@@ -44,20 +53,21 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button logout = findViewById(R.id.logoutBtn);
-        logout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getApplicationContext(),Login.class));
-                finish();
-            }
-        });
+//        Button logout = findViewById(R.id.logoutBtn);
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(getApplicationContext(),Login.class));
+//                finish();
+//            }
+//        });
 
 
 
         fullName = findViewById(R.id.profileName);
         phone = findViewById(R.id.profilePhone);
+        ccCode = findViewById(R.id.cc_code);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -75,6 +85,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 phone.setText(documentSnapshot.getString("PhoneNumber"));
+            }
+        });
+        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+                ccCode.setText(documentSnapshot.getString("CC_Code"));
             }
         });
     }

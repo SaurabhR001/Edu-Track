@@ -6,15 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".studEdit">
 
-    <TextView
-        android:id="@+id/nomad"
-        android:layout_width="194dp"
-        android:layout_height="87dp"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="357dp"
-        android:layout_marginEnd="94dp"
-        android:text="This Activity will contain the Edit information bulletin"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="19dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/fNAme"
+        android:layout_width="255dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:hint="Full Name"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="256dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="26dp"
+        android:text="Please update your profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/admission_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="Admisiion number"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Date of birth"
+        android:inputType="date"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/admission_no" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/cc_code"
+        android:layout_width="158dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="CC CODE"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/tg_code"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth" />
+
+    <EditText
+        android:id="@+id/tg_code"
+        android:layout_width="164dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="TG CODE"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth" />
+
+    <!--    <EditText-->
+<!--        android:id="@+id/editTextDate"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="22dp"-->
+<!--        android:layout_marginTop="136dp"-->
+<!--        android:ems="10"-->
+<!--        android:inputType="date"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/admission_no" />-->
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
