@@ -16,6 +16,16 @@ public class Admin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         Button logout = findViewById(R.id.button);
+        Button chnge = findViewById(R.id.showdataBtn);
+
+        chnge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),TeacherFetchedData.class));
+                finish();
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
