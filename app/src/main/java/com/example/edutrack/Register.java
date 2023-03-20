@@ -111,7 +111,7 @@ public class Register extends AppCompatActivity {
                                 finish();
                             }
                             if (isStudentBox.isChecked()) {
-                                startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                                startActivity(new Intent(getApplicationContext(),StudProfileSetup.class));
                                 finish();
                             }
                         }

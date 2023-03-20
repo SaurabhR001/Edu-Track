@@ -22,7 +22,6 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),TeacherFetchedData.class));
-                finish();
             }
         });
 

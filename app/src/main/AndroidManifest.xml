@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".StudProfileSetup"
+            android:exported="false" />
+        <activity
             android:name=".TeacherFetchedData"
             android:exported="false" />
         <activity
