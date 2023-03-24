@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
         fullName = findViewById(R.id.profileName);
         phone = findViewById(R.id.profilePhone);
-        ccCode = findViewById(R.id.cc_code);
+//        ccCode = findViewById(R.id.cc_code);
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
@@ -79,19 +79,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 fullName.setText(documentSnapshot.getString("FullName"));
-            }
-        });
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
                 phone.setText(documentSnapshot.getString("PhoneNumber"));
+                //ccCode.setText(documentSnapshot.getString("CC_Code"));
             }
         });
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
-                ccCode.setText(documentSnapshot.getString("CC_Code"));
-            }
-        });
+//        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+//                phone.setText(documentSnapshot.getString("PhoneNumber"));
+//            }
+//        });
+//        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+//            @Override
+//            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException error) {
+//                ccCode.setText(documentSnapshot.getString("CC_Code"));
+//            }
+//        });
     }
 }

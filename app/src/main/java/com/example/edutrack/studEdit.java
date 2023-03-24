@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -38,10 +34,10 @@ public class studEdit extends AppCompatActivity {
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-        admission_no = findViewById(R.id.admission_no);
-        dob = findViewById(R.id.date_of_birth);
-        cc_code = findViewById(R.id.cc_code);
-        tg_code = findViewById(R.id.tg_code);
+//        admission_no = findViewById(R.id.admission_no1);
+//        dob = findViewById(R.id.date_of_birth);
+//        cc_code = findViewById(R.id.cc_code);
+//        tg_code = findViewById(R.id.tg_code);
 
         subBtn = findViewById(R.id.submit);
 
@@ -55,6 +51,7 @@ public class studEdit extends AppCompatActivity {
                     FirebaseUser user = fAuth.getCurrentUser();
                     DocumentReference df = fStore.collection("Users").document(user.getUid());
                     Map<String,Object> userInfo = new HashMap<>();
+                    userInfo.put("BoB",admission_no.getText().toString());
                     userInfo.put("AdmissionNumber",admission_no.getText().toString());
                     userInfo.put("DoB",dob.getText().toString());
                     userInfo.put("CC_Code",cc_code.getText().toString());

@@ -55,7 +55,7 @@ public class TeacherFetchedData extends AppCompatActivity {
 
     private void EventChangeListner() {
 
-        db.collection("Trial")//.whereEqualTo("firstName","yash")  // this is the gold
+        db.collection("Trial").whereEqualTo("firstName","yash")  // this is the gold
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

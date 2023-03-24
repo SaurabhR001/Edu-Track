@@ -15,7 +15,19 @@
 
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/tg_code"
+            android:layout_width="171dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="TG Code"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toEndOf="@+id/cc_code"
+            app:layout_constraintTop_toBottomOf="@+id/admission_no" />
+
+        <EditText
+            android:id="@+id/first_name"
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -27,7 +39,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/last_name"
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginStart="25dp"
@@ -35,11 +47,11 @@
             android:ems="10"
             android:hint="Last Name"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName2"
+            app:layout_constraintStart_toEndOf="@+id/first_name"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/father_name"
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
@@ -48,10 +60,10 @@
             android:hint="Father's Name"
             android:inputType="textPersonName"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+            app:layout_constraintTop_toBottomOf="@+id/first_name" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/usrname"
             android:layout_width="242dp"
             android:layout_height="39dp"
             android:layout_marginStart="19dp"
@@ -72,7 +84,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/usrname" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -97,17 +109,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="407dp"
-            android:text="Button"
+            android:id="@+id/btn_sub"
+            android:layout_width="209dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextDate2" />
+            app:layout_constraintTop_toBottomOf="@+id/cc_code" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/mother_name"
             android:layout_width="160dp"
             android:layout_height="48dp"
             android:layout_marginStart="25dp"
@@ -115,13 +127,13 @@
             android:ems="10"
             android:hint="Mother's Name"
             android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName4"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+            app:layout_constraintStart_toEndOf="@+id/father_name"
+            app:layout_constraintTop_toBottomOf="@+id/last_name" />
 
         <EditText
-            android:id="@+id/editTextDate2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/dob"
+            android:layout_width="212dp"
+            android:layout_height="49dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="20dp"
             android:ems="10"
@@ -129,9 +141,57 @@
             android:inputType="date"
             android:minHeight="48dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+            app:layout_constraintTop_toBottomOf="@+id/father_name" />
 
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="13dp"
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dob" />
 
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="340dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Educational information"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/address" />
+
+        <EditText
+            android:id="@+id/admission_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Admission number"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/cc_code"
+            android:layout_width="171dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="CC Code"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/admission_no" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
