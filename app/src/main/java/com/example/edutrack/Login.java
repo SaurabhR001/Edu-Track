@@ -96,7 +96,7 @@ public class Login extends AppCompatActivity {
                 }
 
                 if(documentSnapshot.getString("isStudent") != null){
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), StudentDashboard.class));
                     finish();
                 }
             }
@@ -127,7 +127,7 @@ public class Login extends AppCompatActivity {
                         finish();
                     }
                     if (documentSnapshot.getString("isStudent") != null) {
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), StudentDashboard.class));
                         finish();
                     }
                 }

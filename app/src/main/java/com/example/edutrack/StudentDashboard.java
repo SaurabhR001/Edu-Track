@@ -16,9 +16,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-import java.nio.file.FileStore;
-
-public class MainActivity extends AppCompatActivity {
+public class StudentDashboard extends AppCompatActivity {
     TextView fullName,phone,ccCode;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_student_dashboard);
         Button logout = findViewById(R.id.logoutBtn);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override

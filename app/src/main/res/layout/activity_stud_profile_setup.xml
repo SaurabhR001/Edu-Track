@@ -71,7 +71,7 @@
             android:text="Name comes here"
             android:textSize="25dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/profpic"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
         <TextView
@@ -87,7 +87,7 @@
             app:layout_constraintTop_toBottomOf="@+id/usrname" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/profpic"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
@@ -105,7 +105,7 @@
             android:text="Hello"
             android:textSize="25dp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintStart_toEndOf="@+id/profpic"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button

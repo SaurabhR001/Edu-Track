@@ -58,7 +58,7 @@ public class studEdit extends AppCompatActivity {
                     userInfo.put("TG_Code",tg_code.getText().toString());
 
                     df.update(userInfo);
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), StudentDashboard.class));
                     finish();
 
                 }

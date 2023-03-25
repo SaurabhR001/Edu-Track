@@ -30,8 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Register"
+            android:exported="false"/>
+        <activity
+            android:name=".StudentDashboard"
+            android:exported="false"/>
     </application>
 
 </manifest>

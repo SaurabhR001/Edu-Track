@@ -96,7 +96,7 @@ public class StudProfileSetup extends AppCompatActivity {
                     userInfo.put("TG Code", TGcode.getText().toString());
 
                     df.update(userInfo);
-                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    startActivity(new Intent(getApplicationContext(), StudentDashboard.class));
                     finish();
                 }
             }
